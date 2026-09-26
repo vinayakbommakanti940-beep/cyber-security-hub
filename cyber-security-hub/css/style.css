@@ -1,0 +1,90 @@
+:root {
+  --bg: #0a0e1a;
+  --card: #141b2d;
+  --accent: #00ff9d;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+header h1 { font-size: 2.5rem; color: var(--accent); }
+header p { color: var(--muted); }
+
+main { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+section { margin-bottom: 60px; }
+
+h2 {
+  margin-bottom: 20px;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+#pwdInput {
+  width: 100%;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+#pwdInput:focus { outline: 2px solid var(--accent); }
+
+.meter {
+  height: 10px;
+  background: #1e293b;
+  border-radius: 6px;
+  margin: 14px 0;
+  overflow: hidden;
+}
+
+#meterFill {
+  height: 100%;
+  width: 0%;
+  background: #ef4444;
+  transition: width .3s, background .3s;
+}
+
+#pwdTips { list-style: none; margin-top: 10px; }
+#pwdTips li { color: var(--muted); font-size: .9rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  transition: transform .2s, border-color .2s;
+}
+
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 8px; }
+.card p { color: var(--muted); font-size: .9rem; }
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  border-top: 1px solid #1e293b;
+}
