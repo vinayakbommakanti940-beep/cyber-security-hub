@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSec Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav style="margin-top:16px;">
+  <a href="contacts-dashboard.html" style="color:var(--accent); text-decoration:none;">View Project Dashboard →</a>
+</nav>
+    <h1>🛡️ CyberSec Hub</h1>
+    <p>Learn web security. Test your passwords. Stay safe.</p>
+  </header>
+
+  <main>
+    <section id="tools">
+      <h2>Password Strength Checker</h2>
+      <input type="text" id="pwdInput" placeholder="Type a password...">
+      <div class="meter"><div id="meterFill"></div></div>
+      <p id="pwdResult">Start typing to check strength</p>
+      <ul id="pwdTips"></ul>
+    </section>
+
+    <section id="owasp">
+      <h2>OWASP Top 10 — Common Web Attacks</h2>
+      <div class="card-grid" id="cardGrid"></div>
+    </section>
+
+    <section id="projects">
+      <h2>My Github Projects</h2>
+      <div class="card-grid" id="projectGrid">
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by Vinayak · For educational use only</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
