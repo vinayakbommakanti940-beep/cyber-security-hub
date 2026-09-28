@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Contacts Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .contact-card h3 { color: var(--accent); margin-bottom: 12px; }
+    .contact-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card p { color: var(--muted); font-size: .9rem; margin: 4px 0; }
+    .badge {
+      display: inline-block;
+      background: #1e293b;
+      color: var(--accent);
+      font-size: .75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📇 Project Contacts Dashboard</h1>
+    <p>Quick links to every repo, live site, and contact channel</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Repositories</h2>
+      <div class="dashboard">
+        <div class="contact-card">
+          <span class="badge">Live</span>
+          <h3>CyberSec Hub</h3>
+          <p>Security awareness site with password checker + OWASP reference.</p>
+          <a href="https://github.com/vinayakbommakanti940-beep/cyber-security-hub" target="_blank">GitHub Repo →</a><br>
+          <a href="https://vinayakbommakanti940-beep.github.io/cyber-security-hub/" target="_blank">Live Site →</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="badge">Live</span>
+          <h3>Portfolio Website</h3>
+          <p>Main personal portfolio — dark theme, project showcase.</p>
+          <a href="https://github.com/vinayakbommakanti940-beep/vinayakbommakanti940-beep.github.io" target="_blank">GitHub Repo →</a><br>
+          <a href="https://vinayakbommakanti940-beep.github.io/" target="_blank">Live Site →</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="badge">In Progress</span>
+          <h3>Hydraulics Calculator</h3>
+          <p>Node.js/Express backend, gauge-panel styled frontend.</p>
+          <a href="#" target="_blank">GitHub Repo → (add link)</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="badge">In Progress</span>
+          <h3>ML Portfolio Projects</h3>
+          <p>Spam classifier, digit classifier, AI chatbot assistant.</p>
+          <a href="#" target="_blank">GitHub Repo → (add link)</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="dashboard">
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <a href="https://github.com/vinayakbommakanti940-beep" target="_blank">github.com/vinayakbommakanti940-beep →</a>
+        </div>
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p>Add your LinkedIn URL here</p>
+          <a href="#" target="_blank">linkedin.com/in/yourname →</a>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>Add your contact email here</p>
+          <a href="vinayakbommakanti940@gmail.com">vinayakbommakanti940@gmail.com →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://instagram.com/vinx_7.8" target="_blank" class="social-icon insta" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/919494666074" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://facebook.com/search/top?q=Vinayak%20Bommakanti" target="_blank" class="social-icon fb" title="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+
+    <p class="footer-address">
+      <i class="fa-solid fa-location-dot"></i> Srilaxmi Sai Towers, Jagtial, Telangana
+    </p>
+
+    <p class="footer-copy">&copy; <span id="year"></span> Vinayak Bommakanti. All rights reserved.</p>
+  </footer>
+
+  <footer>
+    <p>Built by Vinayak · Project Contacts Dashboard</p>
+  </footer>
+</body>
+</html>
