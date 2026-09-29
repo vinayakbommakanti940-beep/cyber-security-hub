@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="module" src="js/firebase-auth.js" defer></script>
+    <div id="recaptcha-container"></div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login / Register</title>
@@ -21,6 +23,7 @@
       <!-- LOGIN FORM -->
       <form id="loginForm" class="auth-form active">
         <input type="email" id="loginEmail" placeholder="Email address" required>
+        <input type="tel" id="loginPhone" placeholder="+91 9494666074 (with country code)" required>
         <button type="submit" class="btn-primary">Send OTP</button>
         <div id="loginOtpBox" class="otp-box hidden">
           <input type="text" id="loginOtpInput" maxlength="6" placeholder="Enter 6-digit OTP">
