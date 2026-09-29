@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1><i class="fa-solid fa-shield-halved"></i> CyberSec Hub</h1>
+      <p class="subtitle">Sign in to continue</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="register">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="auth-form active">
+        <input type="email" id="loginEmail" placeholder="Email address" required>
+        <button type="submit" class="btn-primary">Send OTP</button>
+        <div id="loginOtpBox" class="otp-box hidden">
+          <input type="text" id="loginOtpInput" maxlength="6" placeholder="Enter 6-digit OTP">
+          <button type="button" id="loginVerifyBtn" class="btn-primary">Verify & Login</button>
+          <p class="otp-hint" id="loginOtpHint"></p>
+        </div>
+        <p class="msg" id="loginMsg"></p>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="auth-form">
+        <input type="text" id="regUsername" placeholder="Username" required>
+        <input type="email" id="regEmail" placeholder="Email address" required>
+        <button type="submit" class="btn-primary">Send OTP</button>
+        <div id="regOtpBox" class="otp-box hidden">
+          <input type="text" id="regOtpInput" maxlength="6" placeholder="Enter 6-digit OTP">
+          <button type="button" id="regVerifyBtn" class="btn-primary">Verify & Register</button>
+          <p class="otp-hint" id="regOtpHint"></p>
+        </div>
+        <p class="msg" id="regMsg"></p>
+      </form>
+
+      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to site</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
