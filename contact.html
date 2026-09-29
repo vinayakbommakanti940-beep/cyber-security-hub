@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("YOUR_PUBLIC_KEY");
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const params = {
+      from_name: document.getElementById('cName').value,
+      from_email: document.getElementById('cEmail').value,
+      message: document.getElementById('cMessage').value
+    };
+
+    // Send message to you
+    emailjs.send('YOUR_SERVICE_ID', 'TEMPLATE_TO_YOU', params);
+    // Auto-reply to the sender
+    emailjs.send('YOUR_SERVICE_ID', 'TEMPLATE_AUTOREPLY', params)
+      .then(() => alert('Message sent! Check your inbox for confirmation.'));
+  });
+</script>
