@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieHub — Order food online</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo"><i class="fa-solid fa-utensils"></i> FoodieHub</span>
+    </div>
+    <div class="nav-location">
+      <i class="fa-solid fa-location-dot"></i>
+      <span id="userLocation">Jagtial, Telangana</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="nav-right">
+      <a href="contacts-dashboard.html">Projects</a>
+      <a href="#" id="userGreeting">Account</a>
+      <button id="logoutBtn" class="btn-outline">Logout</button>
+    </div>
+  </nav>
+
+  <p class="order-counter">🎉 <span id="orderCountDisplay">0</span> orders placed from this device</p>
+
+<div class="delivery-partners">
+  <span>Also available on:</span>
+  <a href="https://www.zomato.com" target="_blank">Zomato</a>
+  <a href="https://www.swiggy.com" target="_blank">Swiggy</a>
+  <a href="https://blinkit.com" target="_blank">Blinkit</a>
+  <a href="https://rapido.bike" target="_blank">Rapido</a>
+</div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Order food & explore restaurants near you</h1>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search for restaurant, cuisine or dish">
+    </div>
+  </header>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="cat-item" data-filter="all"><i class="fa-solid fa-bowl-food"></i><span>All</span></div>
+    <div class="cat-item" data-filter="pizza"><i class="fa-solid fa-pizza-slice"></i><span>Pizza</span></div>
+    <div class="cat-item" data-filter="biryani"><i class="fa-solid fa-drumstick-bite"></i><span>Biryani</span></div>
+    <div class="cat-item" data-filter="chinese"><i class="fa-solid fa-bowl-rice"></i><span>Chinese</span></div>
+    <div class="cat-item" data-filter="dessert"><i class="fa-solid fa-ice-cream"></i><span>Desserts</span></div>
+    <div class="cat-item" data-filter="south indian"><i class="fa-solid fa-plate-wheat"></i><span>South Indian</span></div>
+    <div class="cat-item" data-filter="burger"><i class="fa-solid fa-burger"></i><span>Burgers</span></div>
+  </section>
+
+  <section class="categories">
+  <div class="cat-item active" data-filter="all"><i class="fa-solid fa-bowl-food"></i><span>All</span></div>
+  <div class="cat-item" data-filter="beverages"><i class="fa-solid fa-mug-hot"></i><span>Tea & Coffee</span></div>
+  <div class="cat-item" data-filter="biryani"><i class="fa-solid fa-drumstick-bite"></i><span>Biryani</span></div>
+  <div class="cat-item" data-filter="mandi"><i class="fa-solid fa-fire-burner"></i><span>Mandi</span></div>
+  <div class="cat-item" data-filter="north indian"><i class="fa-solid fa-plate-wheat"></i><span>North Indian</span></div>
+  <div class="cat-item" data-filter="fast food"><i class="fa-solid fa-burger"></i><span>Fast Food</span></div>
+  <div class="cat-item" data-filter="desserts"><i class="fa-solid fa-ice-cream"></i><span>Desserts</span></div>
+</section>
+
+  <!-- RESTAURANT GRID -->
+  <main>
+    <h2 class="section-title">Restaurants near you</h2>
+    <div class="restaurant-grid" id="restaurantGrid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://instagram.com/vinx_7.8" target="_blank" class="social-icon insta"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/919494666074" target="_blank" class="social-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://facebook.com/search/top?q=Vinayak%20Bommakanti" target="_blank" class="social-icon fb"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Srilaxmi Sai Towers, Jagtial, Telangana</p>
+    <p class="footer-copy">&copy; <span id="year"></span> FoodieHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
