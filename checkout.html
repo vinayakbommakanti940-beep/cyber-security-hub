@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — FoodieHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="logo"><i class="fa-solid fa-utensils"></i> FoodieHub</span>
+    <a href="home.html" style="text-decoration:none;color:var(--gray-700);font-weight:600;">← Back to menu</a>
+  </nav>
+
+  <main class="checkout-wrap">
+    <div class="checkout-left">
+      <h2>Your Order</h2>
+      <div id="cartItems"></div>
+
+      <h2 style="margin-top:30px;">Delivery Address</h2>
+      <select id="deliveryCity">
+        <option>Jagtial</option><option>Hyderabad</option><option>Warangal</option>
+        <option>Karimnagar</option><option>Nizamabad</option><option>Khammam</option>
+      </select>
+      <input type="text" id="addressLine" placeholder="House no, street, landmark">
+    </div>
+
+    <div class="checkout-right">
+      <h2>Bill Summary</h2>
+      <div class="bill-row"><span>Item Total</span><span id="billSubtotal">₹0</span></div>
+      <div class="bill-row"><span>GST (5%)</span><span id="billGst">₹0</span></div>
+      <div class="bill-row"><span>Delivery Fee</span><span>₹25</span></div>
+      <div class="bill-row total"><span>To Pay</span><span id="billTotal">₹0</span></div>
+
+      <button id="payBtn" class="btn-pay">Place Order (Demo)</button>
+      <p class="demo-note"><i class="fa-solid fa-circle-info"></i> Demo checkout — no real payment is processed.</p>
+    </div>
+  </main>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-check success-icon"></i>
+      <h2>Order Placed!</h2>
+      <p id="txnId"></p>
+      <p class="demo-note">This is a demo transaction — no money was charged.</p>
+      <a href="home.html" class="btn-pay">Back to Menu</a>
+    </div>
+  </div>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>
