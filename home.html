@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/otpauth@9.3.1/dist/otpauth.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
 <body>
+  <div class="food-bg">
+  <span>🍕</span><span>🍔</span><span>🍜</span><span>🍰</span>
+  <span>🍛</span><span>🥤</span><span>🍗</span><span>🍩</span>
+</div>
 
   <!-- TOP NAV -->
   <nav class="navbar">
@@ -30,10 +36,23 @@
   </select>
 </div>
     <div class="nav-right">
+      <a href="checkout.html" class="cart-link">
+  <i class="fa-solid fa-cart-shopping"></i> Cart <span id="cartBadge" class="cart-badge">0</span>
+</a>
       <a href="contacts-dashboard.html">Projects</a>
       <a href="#" id="userGreeting">Account</a>
       <button id="logoutBtn" class="btn-outline">Logout</button>
+      <a href="my-orders.html" style="text-decoration:none;color:var(--gray-700);font-weight:600;">
+  <i class="fa-solid fa-receipt"></i> Orders
+</a>
     </div>
+    <div id="totpSetup" class="otp-box hidden">
+  <p class="otp-hint">Scan this with Google Authenticator:</p>
+  <canvas id="qrCanvas"></canvas>
+  <p class="otp-hint" id="totpSecretText"></p>
+  <input type="text" id="totpVerifyInput" maxlength="6" placeholder="Enter 6-digit code from app">
+  <button type="button" id="totpVerifyBtn" class="btn-primary">Confirm 2FA Setup</button>
+</div>
   </nav>
 
   <p class="order-counter">🎉 <span id="orderCountDisplay">0</span> orders placed from this device</p>

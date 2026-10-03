@@ -30,6 +30,11 @@
           <button type="button" id="loginVerifyBtn" class="btn-primary">Verify & Login</button>
           <p class="otp-hint" id="loginOtpHint"></p>
         </div>
+        <!-- Add inside #loginForm, after loginOtpBox -->
+<div id="loginTotpBox" class="otp-box hidden">
+  <input type="text" id="loginTotpInput" maxlength="6" placeholder="Enter code from Authenticator app">
+  <button type="button" id="loginTotpVerifyBtn" class="btn-primary">Verify 2FA</button>
+</div>
         <p class="msg" id="loginMsg"></p>
       </form>
 
